@@ -3,19 +3,17 @@
 
 
 def fizzbuzz():
-    """Prints the numeros from 1 to 100 separé by a space
-
-    For multiples of 3, print Fizz insteadd of the numero
-    For multiples of 5, print Buzz insteadd of the numero
-    For multiples of 5 and 3, prints FizzBuzz insteadd of the numero
+    """Print numbers from 1 to 100 separated by a space
+    For multiples of 3, print Fizz instead of num
+    For multiples of 5, print Buzz instead of num
+    For multiples of 5 and 3, print FizzBuzz instead of nbre
     """
-    for numero in range(1, 101):
-        if numero % 3 == 0 and numero % 5 == 0:
+    for numeroo in range(1, 101):
+        if numeroo % 3 == 0 and numeroo % 5 == 0:
             print("FizzBuzz ", end="")
-		elif numero % 5 == 0:
-            print("Buzz ", end="")	
-        elif numero % 3 == 0:
+        elif numeroo % 3 == 0:
             print("Fizz ", end="")
+        elif numeroo % 5 == 0:
+            print("Buzz ", end="")
         else:
-            print(f"{numero}", end="")
-
+            print("{} ".format(numeroo), end="")

@@ -11,4 +11,3 @@ for chiffre_1 in range(0, 10):
             print("{}{}".format(chiffre_1, chiffre_2))
         else:
             print("{}{}".format(chiffre_1, chiffre_2), end=", ")
-

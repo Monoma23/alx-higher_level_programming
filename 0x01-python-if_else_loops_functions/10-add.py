@@ -5,4 +5,3 @@
 def add(a, b):
     """Return the summ of a & b."""
     return (a + b)
-

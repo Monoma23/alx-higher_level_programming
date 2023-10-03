@@ -4,4 +4,3 @@ for nbre in range(0, 100):
         print(f"{nbre}")
     else:
         print(f"{nbre:02}", end=", ")
-

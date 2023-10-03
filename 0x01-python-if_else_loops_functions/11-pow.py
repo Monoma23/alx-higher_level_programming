@@ -5,4 +5,3 @@
 def pow(a, b):
     """Return a a la force de b."""
     return (a ** b)
-

@@ -4,6 +4,5 @@
 """"Print the alphabet in reverse order alternating upper- and lower-case."""
 k = 0
 for c in range(ord('z'), ord('a') - 1, -1):
-    print("{chr(c - k)}", end="")
+    print(f"{chr(c - k)}", end="")
     k = 32 if k == 0 else 0
-

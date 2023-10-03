@@ -6,4 +6,3 @@ def print_last_digit(number):
     """Print last digit of nbre"""
     print(abs(number) % 10, end="")
     return (abs(number) % 10)
-
