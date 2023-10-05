@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 if __name__ == "__main__":
     """thiss is a program that prints nbr and  list of its arguments. """
     import sys
