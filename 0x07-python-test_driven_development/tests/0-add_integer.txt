@@ -1,0 +1,33 @@
+=============================
+those Tests test function called that ``add_integer()`` that adds 2 int.
+=============================
+``add_integer`` which returns sum of its args which have to be int
+
+    >>> add_integer = __import__("0-add_integer").add_integer
+    >>> add_integer(2, 4)
+    6
+
+Float casted to int.
+    >>> add_integer(100, -2)
+    98
+
+    >>> add_integer(100.3, -2)
+    98
+
+    >>> add_integer(100, "sosoda")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer("sosoda", 100)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(2)
+    100
+
+    >>> add_integer(3./4, 2)
+    2
+
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer

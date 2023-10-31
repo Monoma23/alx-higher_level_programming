@@ -1,0 +1,31 @@
+This are tests for a function a name
+===============================
+if both names are provided, print all,
+ok thats it 
+================================
+only one function called say_my_name be carefl
+
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
+    >>> say_my_name("nozilo", "sama")
+    My name is nozilo sama
+
+    if one name is passed it is working
+    
+    >>> say_my_name("nozilo") # doctest: +NORMALIZE_WHITESPACE
+    My name is nozilo
+
+    >>> say_my_name("", "nozilo") # doctest: +NORMALIZE_WHITESPACE
+    My name is nozilo
+
+    exception if first name is not a str type
+    >>> say_my_name(55, "jojo") # doctest: +IGNORE_EXCEPTION_DETAIL
+    Traceback (most recent call last):
+    TypeError: first_name must be a str type
+
+    exception if last name is not a str type
+    >>> say_my_name("jojo", 55) # doctest: +IGNORE_EXCEPTION_DETAIL
+    Traceback (most recent call last):
+    TypeError: last_name must be a str type
+
+    when empty str type is passed, prints only my name is
+    >>> say_my_name("", "") # doctest: +NORMALIZE_WHITESPACE

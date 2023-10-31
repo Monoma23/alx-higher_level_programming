@@ -1,0 +1,50 @@
+this is function divides elements of a matrix
+==============================================
+uses only case
+
+    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+    division process
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+    div is a str type
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], "3")
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+    one of the int is a float
+    >>> matrix_divided([[1, 2.9945, 3], [4, 5, 6]], 3)
+    [[0.53, 1.0, 1.0], [1.33, 1.65, 2.0]]
+
+    division by zero prohibited
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+    elements of a matrix are str type
+    >>> matrix_divided([["1", "2", "3"], ["4", "5", "6"]], 3)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    when lines with different size
+    >>> matrix_divided([[1, 3], [4, 5, 6]], 3)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+    case where elements of a matrix are null
+    >>> matrix_divided([[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]], 3)
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+    parameter is absent
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]])
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing a one required positional argument: 'div'
+
+    parameters are miss inputed
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing two oha positional arguments: 'matrix' and 'div'
+
+    testing for NaN, Skip this is a gd challenge
+    >>> matrix_divided([[1, NaN, 3], [4, 5, 6]], 3) # doctest: +SKIP

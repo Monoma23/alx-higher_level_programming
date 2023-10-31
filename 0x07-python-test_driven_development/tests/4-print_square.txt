@@ -1,0 +1,34 @@
+task 4 prints square with the char #
+=======================================
+it is easy wisy lets dive in
+
+size should be an int type
+
+    >>> print_square = __import__("4-print_square").print_square
+    >>> print_square(4) # doctest: +NORMALIZE_WHITESPACE
+    ####
+    ####
+    ####
+    ####
+
+    >>> print_square(0)
+
+    if size typed is less than zero
+    >>> print_square(-2)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+    if size is type float and less than 0
+    >>> print_square(0.59)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    if size is not an integer
+    >>> print_square("square")
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    if there is no args
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() is missing 1 required positional arg: 'size'
