@@ -5,5 +5,5 @@ import json
 
 def load_from_json_file(filename):
     """writes  object to a text file"""
-    with open(filename, mode= "r" ) as file:
+    with open(filename, mode="r") as file:
         return json.load(file)
