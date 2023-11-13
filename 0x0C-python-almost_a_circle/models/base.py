@@ -6,6 +6,7 @@ import json
 class Base:
     """the base class"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         """this is our constructor"""
         if id is not None:
@@ -21,7 +22,7 @@ class Base:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
-        
+
     @classmethod
     def save_to_file(cls, list_objs):
         """writes json representation to a file"""

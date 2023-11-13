@@ -17,7 +17,7 @@ class Rectangle(Base):
     def width(self):
         """width getter"""
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """width setter"""
@@ -31,7 +31,7 @@ class Rectangle(Base):
     def height(self):
         """height getter"""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """height setter"""
@@ -45,7 +45,7 @@ class Rectangle(Base):
     def x(self):
         """x getter"""
         return self.__x
-    
+
     @x.setter
     def x(self, value):
         """x setter"""
@@ -59,7 +59,7 @@ class Rectangle(Base):
     def y(self):
         """y getter"""
         return self.__y
-    
+
     @y.setter
     def y(self, value):
         """y setter"""
@@ -72,7 +72,7 @@ class Rectangle(Base):
     def area(self):
         """area of Rectngle"""
         return self.__width * self.__height
-    
+
     def display(self):
         """print the Rectangle"""
         for k in range(self.__y):
@@ -118,4 +118,4 @@ class Rectangle(Base):
         mon_dictnr["height"] = self.height
         mon_dictnr["x"] = self.x
         mon_dictnr["y"] = self.y
-        return mon_dictnr   
+        return mon_dictnr
