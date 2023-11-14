@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """yo squaress"""
-from yo import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):

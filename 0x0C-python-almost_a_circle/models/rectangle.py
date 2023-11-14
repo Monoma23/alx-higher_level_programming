@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """public instance method"""
-from ji import Base
+from models.base import Base
 
 
 class Rectangle(Base):
