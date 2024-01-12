@@ -6,8 +6,7 @@ import sys
 
 if __name__ == "__main__":
 
-    username, password, database, state_name = sys.argv[1],
-    sys.argv[2], sys.argv[3], sys.argv[4]
+    username, password, database, state_name = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
 
     # Connect to MySQL server
     db = MySQLdb.connect(
