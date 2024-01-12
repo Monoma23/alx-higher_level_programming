@@ -5,8 +5,10 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    # Get MySQL username, password, database name, and state name from command line arguments
-    username, password, database, state_name = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+    # Get MySQL username, password, database name,
+    #  and state name from command line arguments
+    username, password, database, SNme = sys.argv[1],
+    sys.argv[2], sys.argv[3], sys.argv[4]
 
     # Connect to MySQL server
     db = MySQLdb.connect(
@@ -20,11 +22,11 @@ if __name__ == "__main__":
     # Create a cursor object to interact with the database
     cursor = db.cursor()
 
-    # Create the SQL query using format with user input
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
+    # Create the SQL qry using format with user input
+    qry = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(SNme)
 
-    # Execute the SQL query
-    cursor.execute(query)
+    # Execute the SQL qry
+    cursor.execute(qry)
 
     # Fetch all rows from the result set
     matching_states = cursor.fetchall()
