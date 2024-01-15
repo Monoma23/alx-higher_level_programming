@@ -1,40 +1,35 @@
 #!/usr/bin/python3
-""" lists all states from the dabse hbtn_0e_0_usa
-"""
+'''
+take on the name of an state as a arg and lists all cities
+'''
+
 import MySQLdb
 import sys
 
-if __name__ == "__main__":
-    # Get MySQL UN, PSWRD, dabse name, and state name from CL args
-    UN, PSWRD, dabse, stNm = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
-
-    # Connect to MySQL server
+if __name__ == '__main__':
     db = MySQLdb.connect(
-        host="localhost",
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3],
         port=3306,
-        user=UN,
-        passwd=PSWRD,
-        db=dabse
-    )
+        host='localhost')
 
-    # Create a cursor object to interact with the dabse
-    cursor = db.cursor()
+    icursor = db.cursor()
+    icursor.execute(
+        'SELECT cities.name FROM cities\
+        INNER JOIN states ON cities.state_id = states.id\
+        WHERE states.name = %s \
+        ORDER BY cities.id ASC', (sys.argv[4], ))
 
-    # Create  parameterized SQL query to retrieve cities of the specified state
-    query = "SELECT cities.id, cities.name, states.name FROM cities " \
-            "JOIN states ON cities.state_id = states.id " \
-            "WHERE states.name = %s ORDER BY cities.id ASC"
+    cities = icursor.fetchall()
 
-    # Execute the SQL query with the stNm as a parameter
-    cursor.execute(query, (stNm,))
-
-    # Fetch all rows from the result set
-    cities = cursor.fetchall()
-
-    # Display the results
+    id = 0
     for city in cities:
-        print(city)
+        if id != 0:
+            print(", ", end="")
+        print("%s" % city, end="")
+        id += 1
+    print("")
 
-    # Close the cursor and dabse connection
-    cursor.close()
+    icursor.close()
     db.close()
