@@ -11,4 +11,3 @@ Myfs.readFile(myfile, (err, data) => {
     console.log(err);
   }
 });
-
